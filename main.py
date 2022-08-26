@@ -26,9 +26,9 @@ import os
 FLAGS = flags.FLAGS
 
 config_flags.DEFINE_config_file(
-  "config", None, "Training configuration.", lock_config=True)
-flags.DEFINE_string("workdir", None, "Work directory.")
-flags.DEFINE_enum("mode", None, ["train", "eval"], "Running mode: train or eval")
+  "config", "/Users/jasonhu/Documents/GitHub/score_sde/configs/default_celeba_configs.py", "Training configuration.", lock_config=True)
+flags.DEFINE_string("workdir", "/Users/jasonhu/Documents/GitHub/score_sde", "Work directory.")
+flags.DEFINE_enum("mode", "train", ["train", "eval"], "Running mode: train or eval")
 flags.DEFINE_string("eval_folder", "eval",
                     "The folder name for storing evaluation results")
 flags.mark_flags_as_required(["workdir", "config", "mode"])
